@@ -1,2 +1,2 @@
 # reactProjects
-A BIG OLE BUNCHA REACT PROJECTS
+A portfolio of my React front ends. 
