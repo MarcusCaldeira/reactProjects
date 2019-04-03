@@ -11,4 +11,4 @@ const appRoot = document.getElementById('app');
 
 
 //This says we wanna render that template in that element. 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(template, appRoot)
