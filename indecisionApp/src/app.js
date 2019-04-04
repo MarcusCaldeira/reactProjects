@@ -34,10 +34,27 @@ const template2 = (
         <p>Location: {user.Location}</p>
     </div>
 )
-
 const approot2 = document.getElementById('appTwo')
+
+var app = {
+    title: 'WHAT A TITLE',
+    subtitle: 'WHAT is a subtitle anyway?'
+}
+
+const template3 = (
+    <div>
+        <h1>{app.title}</h1>
+        <h1>{app.subtitle}</h1>
+    </div>
+)
+
+const approot3 = document.getElementById('appThree')
+
+
 
 
 //This says we wanna render that template in that element. 
 ReactDOM.render(template, appRoot)
 ReactDOM.render(template2, approot2)
+ReactDOM.render(template3, approot3)
+
