@@ -6,7 +6,7 @@ console.log('App.JS is running!')
 
 //JSX - Javascript XML(its basically just a language extension)
 
-const template = <h1>IDk Where one of those elements is coming from?</h1>
+const template = <div><h1>IDk Where one of those elements is coming from?</h1><p>SO why do you need to be wrapped.</p></div>
 const appRoot = document.getElementById('app')
 
 

@@ -8,9 +8,18 @@ console.log('App.JS is running!');
 //JSX - Javascript XML(its basically just a language extension)
 
 var template = React.createElement(
-  'h1',
+  'div',
   null,
-  'IDk Where one of those elements is coming from?'
+  React.createElement(
+    'h1',
+    null,
+    'IDk Where one of those elements is coming from?'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'SO why do you need to be wrapped.'
+  )
 );
 var appRoot = document.getElementById('app');
 
