@@ -14,16 +14,53 @@ var template = React.createElement(
     React.createElement(
         'h1',
         null,
-        'IDk Where one of those elements is coming from?'
+        'Changed this a bit to early'
     ),
     React.createElement(
         'p',
         null,
         'SO why do you need to be wrapped.'
+    ),
+    React.createElement(
+        'ol',
+        null,
+        React.createElement(
+            'li',
+            null,
+            'IS this gonna work?'
+        ),
+        React.createElement(
+            'li',
+            null,
+            'So that one worked? why did this one break?'
+        )
     )
 );
 
 var appRoot = document.getElementById('app');
 
+var template2 = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Marcus'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Age: 27'
+    ),
+    React.createElement(
+        'p',
+        null,
+        'Location: Saint Paul'
+    )
+);
+
+var approot2 = document.getElementById('appTwo');
+
 //This says we wanna render that template in that element. 
 ReactDOM.render(template, appRoot);
+ReactDOM.render(template2, approot2);
