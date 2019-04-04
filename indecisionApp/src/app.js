@@ -21,13 +21,17 @@ const template = (
 const appRoot = document.getElementById('app')
 
 
+var user = {
+    Name: 'Marcus',
+    Age: 27,
+    Location: 'Saint Paul'
+}
 
-var userName = 'Marcus'
 const template2 = (
     <div>
-        <h1>{userName}</h1>
-        <p>Age: 27</p>
-        <p>Location: Saint Paul</p>
+        <h1>{user.Name + '!'}</h1>
+        <p>Age: {user.Age}</p>
+        <p>Location: {user.Location}</p>
     </div>
 )
 
