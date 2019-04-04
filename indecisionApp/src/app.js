@@ -6,8 +6,8 @@ console.log('App.JS is running!')
 
 //JSX - Javascript XML(its basically just a language extension)
 
-const template = <p>A REACT THING</p>
-const appRoot = document.getElementById('app');
+const template = <h1>IDk Where one of those elements is coming from?</h1>
+const appRoot = document.getElementById('app')
 
 
 //This says we wanna render that template in that element. 
