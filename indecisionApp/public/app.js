@@ -41,7 +41,8 @@ var appRoot = document.getElementById('app');
 
 var user = {
     Name: 'Marcus',
-    Age: 27
+    Age: 27,
+    location: 'Saint Paul'
 };
 
 function getLocation(location) {
@@ -63,7 +64,7 @@ var template2 = React.createElement(
         null,
         user.Name ? user.Name : 'Anon'
     ),
-    React.createElement(
+    user.Age >= 18 && React.createElement(
         'p',
         null,
         'Age: ',

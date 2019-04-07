@@ -24,6 +24,7 @@ const appRoot = document.getElementById('app')
 var user = {
     Name: 'Marcus',
     Age: 27,
+    location: 'Saint Paul'
 }
 
 function getLocation(location){
@@ -35,7 +36,7 @@ function getLocation(location){
 const template2 = (
     <div>
         <h1>{user.Name ? user.Name : 'Anon'}</h1>
-        <p>Age: {user.Age}</p>
+        {(user.Age >= 18) && <p>Age: {user.Age}</p>}
         {getLocation(user.location)}
     </div>
 )
