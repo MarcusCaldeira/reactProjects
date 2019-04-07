@@ -41,8 +41,7 @@ var appRoot = document.getElementById('app');
 
 var user = {
     Name: 'Matcus',
-    Age: 27,
-    Location: 'Saint Paul'
+    Age: 27
 };
 
 function getLocation(location) {

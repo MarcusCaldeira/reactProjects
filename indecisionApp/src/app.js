@@ -24,7 +24,6 @@ const appRoot = document.getElementById('app')
 var user = {
     Name: 'Matcus',
     Age: 27,
-    Location: 'Saint Paul'
 }
 
 function getLocation(location){
