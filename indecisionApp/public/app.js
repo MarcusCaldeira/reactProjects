@@ -45,7 +45,13 @@ var user = {
     Location: 'Saint Paul'
 };
 
-function getLocation() {}
+function getLocation(location) {
+    if (location) {
+        return location;
+    } else {
+        return 'unknown';
+    }
+}
 
 var template2 = React.createElement(
     'div',
@@ -65,7 +71,7 @@ var template2 = React.createElement(
         'p',
         null,
         'Location: ',
-        getLocation()
+        getLocation(user.Location)
     )
 );
 var approot2 = document.getElementById('appTwo');
