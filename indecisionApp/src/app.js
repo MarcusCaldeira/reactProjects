@@ -23,15 +23,12 @@ const appRoot = document.getElementById('app')
 
 var user = {
     Name: 'Matcus',
-    Age: 27,
-    Location: 'Saint Paul'
+    Age: 27
 }
 
 function getLocation(location){
     if (location){
-        return location
-    } else {
-        return 'unknown'
+        return <p>Location: {location}</p>
     }
 }
 
@@ -39,7 +36,7 @@ const template2 = (
     <div>
         <h1>{user.Name + '!'}</h1>
         <p>Age: {user.Age}</p>
-        <p>Location: {getLocation(user.Location)}</p>
+        {getLocation(location)}
     </div>
 )
 const approot2 = document.getElementById('appTwo')

@@ -41,15 +41,17 @@ var appRoot = document.getElementById('app');
 
 var user = {
     Name: 'Matcus',
-    Age: 27,
-    Location: 'Saint Paul'
+    Age: 27
 };
 
 function getLocation(location) {
     if (location) {
-        return location;
-    } else {
-        return 'unknown';
+        return React.createElement(
+            'p',
+            null,
+            'Location: ',
+            location
+        );
     }
 }
 
@@ -67,12 +69,7 @@ var template2 = React.createElement(
         'Age: ',
         user.Age
     ),
-    React.createElement(
-        'p',
-        null,
-        'Location: ',
-        getLocation(user.Location)
-    )
+    getLocation(location)
 );
 var approot2 = document.getElementById('appTwo');
 
