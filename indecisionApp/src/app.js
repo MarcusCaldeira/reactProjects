@@ -22,33 +22,37 @@ const appRoot = document.getElementById('app')
 
 
 var user = {
-    Name: 'Marcus',
+    Name: 'Matcus',
     Age: 27,
     Location: 'Saint Paul'
+}
+
+function getLocation(){
+
 }
 
 const template2 = (
     <div>
         <h1>{user.Name + '!'}</h1>
         <p>Age: {user.Age}</p>
-        <p>Location: {user.Location}</p>
+        <p>Location: {getLocation()}</p>
     </div>
 )
 const approot2 = document.getElementById('appTwo')
 
-var app = {
-    title: 'WHAT A TITLE',
-    subtitle: 'WHAT is a subtitle anyway?'
-}
+// var app = {
+//     title: 'WHAT A TITLE',
+//     subtitle: 'WHAT is a subtitle anyway?'
+// }
 
-const template3 = (
-    <div>
-        <h1>{app.title}</h1>
-        <h1>{app.subtitle}</h1>
-    </div>
-)
+// const template3 = (
+//     <div>
+//         <h1>{app.title}</h1>
+//         <h1>{app.subtitle}</h1>
+//     </div>
+// )
 
-const approot3 = document.getElementById('appThree')
+// const approot3 = document.getElementById('appThree')
 
 
 

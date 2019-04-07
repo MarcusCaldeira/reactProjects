@@ -40,10 +40,12 @@ var template = React.createElement(
 var appRoot = document.getElementById('app');
 
 var user = {
-    Name: 'Marcus',
+    Name: 'Matcus',
     Age: 27,
     Location: 'Saint Paul'
 };
+
+function getLocation() {}
 
 var template2 = React.createElement(
     'div',
@@ -63,32 +65,25 @@ var template2 = React.createElement(
         'p',
         null,
         'Location: ',
-        user.Location
+        getLocation()
     )
 );
 var approot2 = document.getElementById('appTwo');
 
-var app = {
-    title: 'WHAT A TITLE',
-    subtitle: 'WHAT is a subtitle anyway?'
-};
+// var app = {
+//     title: 'WHAT A TITLE',
+//     subtitle: 'WHAT is a subtitle anyway?'
+// }
 
-var template3 = React.createElement(
-    'div',
-    null,
-    React.createElement(
-        'h1',
-        null,
-        app.title
-    ),
-    React.createElement(
-        'h1',
-        null,
-        app.subtitle
-    )
-);
+// const template3 = (
+//     <div>
+//         <h1>{app.title}</h1>
+//         <h1>{app.subtitle}</h1>
+//     </div>
+// )
 
-var approot3 = document.getElementById('appThree');
+// const approot3 = document.getElementById('appThree')
+
 
 //This says we wanna render that template in that element. 
 ReactDOM.render(template, appRoot);
