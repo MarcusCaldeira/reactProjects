@@ -7,10 +7,19 @@ console.log('App.JS is running!')
 //JSX - Javascript XML(its basically just a language extension)
 
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
+var app = {
+    title:'Indecision App', 
+    subtitle: 'Put the hands in the life on a computer.', 
+    option:['one', 'two']
+}
+
+
 const template = (
 <div>
-    <h1>Changed this a bit to early</h1>    
-        <p>SO why do you need to be wrapped.</p>
+    <h1>{app.title}</h1>    
+    {/*Only render the subtitle (and p tag) if the subtitle exists.*/}
+       {app.subtitle && <p>{app.subtitle}</p>}
+       <p>{app.option.length >0 ? 'Here are your options' : 'no options'}</p>
         <ol>
             <li>IS this gonna work?</li>
             <li>So that one worked? why did this one break?</li>
@@ -21,10 +30,19 @@ const template = (
 const appRoot = document.getElementById('app')
 
 
+
+
+
+
+
+
+
+
+
 var user = {
     Name: 'Marcus',
     Age: 27,
-    location: 'Saint Paul'
+    location: 'Saint Pul'
 }
 
 function getLocation(location){
