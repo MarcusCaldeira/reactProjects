@@ -19,10 +19,11 @@ const template = (
     <h1>{app.title}</h1>    
     {/*Only render the subtitle (and p tag) if the subtitle exists.*/}
        {app.subtitle && <p>{app.subtitle}</p>}
+       {/*If app.options.length is greater than zero use one message if its not, use the other. */}
        <p>{app.option.length >0 ? 'Here are your options' : 'no options'}</p>
         <ol>
-            <li>IS this gonna work?</li>
-            <li>So that one worked? why did this one break?</li>
+            <li>Item One</li>
+            <li>Item Two</li>
         </ol>
  </div>
  )
