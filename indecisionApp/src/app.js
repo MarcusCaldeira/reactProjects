@@ -21,46 +21,8 @@ const template = (
 const appRoot = document.getElementById('app')
 
 
-let user = {
-    Name: 'Marcus',
-    Age: 27,
-    location: 'Saint Paul'
-}
-
-function getLocation(location){
-    if (location){
-        return <p>Location: {location}</p>
-    }
-}
-
-const template2 = (
-    <div>
-        <h1>{user.Name ? user.Name : 'Anon'}</h1>
-        {(user.Age >= 18) && <p>Age: {user.Age}</p>}
-        {getLocation(user.location)}
-    </div>
-)
-const approot2 = document.getElementById('appTwo')
-
-const app = {
-    title: 'WHAT A TITLE',
-    subtitle: 'WHAT is a subtitle anyway?'
-}
-
-const template3 = (
-    <div>
-        <h1>{app.title}</h1>
-        <h1>{app.subtitle}</h1>
-    </div>
-)
-
-const approot3 = document.getElementById('appThree')
-
-
 
 
 //This says we wanna render that template in that element. 
 ReactDOM.render(template, appRoot)
-ReactDOM.render(template2, approot2)
-ReactDOM.render(template3, approot3)
 
