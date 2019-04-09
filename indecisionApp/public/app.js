@@ -8,7 +8,7 @@ console.log('App.JS is running!');
 //JSX - Javascript XML(its basically just a language extension)
 
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
-var template = React.createElement(
+var templateOne = React.createElement(
     'div',
     null,
     React.createElement(
@@ -36,8 +36,24 @@ var template = React.createElement(
         )
     )
 );
+var count = 0;
+var templateTwo = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h1',
+        null,
+        'Count: ',
+        count
+    ),
+    React.createElement(
+        'button',
+        { id: 'myID', className: 'Button' },
+        '+1'
+    )
+);
 
 var appRoot = document.getElementById('app');
 
 //This says we wanna render that template in that element. 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
