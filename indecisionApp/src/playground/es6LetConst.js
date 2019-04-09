@@ -15,6 +15,7 @@ var fullName = 'Marcus M Caldeira'
 
 if(fullName){
     //this will split the first name by its spaces and grabs the first one in the array. 
-    var firstName = fullName.split(' ')[0]
+    const firstName = fullName.split(' ')[0]
     console.log(firstName)
 }
+console.log(firstName)

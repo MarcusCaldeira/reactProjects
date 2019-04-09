@@ -21,7 +21,7 @@ const template = (
 const appRoot = document.getElementById('app')
 
 
-var user = {
+let user = {
     Name: 'Marcus',
     Age: 27,
     location: 'Saint Paul'
@@ -42,19 +42,19 @@ const template2 = (
 )
 const approot2 = document.getElementById('appTwo')
 
-// var app = {
-//     title: 'WHAT A TITLE',
-//     subtitle: 'WHAT is a subtitle anyway?'
-// }
+const app = {
+    title: 'WHAT A TITLE',
+    subtitle: 'WHAT is a subtitle anyway?'
+}
 
-// const template3 = (
-//     <div>
-//         <h1>{app.title}</h1>
-//         <h1>{app.subtitle}</h1>
-//     </div>
-// )
+const template3 = (
+    <div>
+        <h1>{app.title}</h1>
+        <h1>{app.subtitle}</h1>
+    </div>
+)
 
-// const approot3 = document.getElementById('appThree')
+const approot3 = document.getElementById('appThree')
 
 
 
