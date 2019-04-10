@@ -18,14 +18,17 @@ const templateOne = (
  </div>
  )
  let count = 0 
+ const addOne = () =>{
+     console.log('Add One')
+ }
 const templateTwo = (
     <div>
         <h1>Count: {count}</h1>
-        <button id='myID' className='Button'>+1</button> 
+        <button onClick = {addOne}>+1</button> 
     
     </div>
 )
-
+console.log(templateTwo)
 const appRoot = document.getElementById('app')
 
 

@@ -37,6 +37,9 @@ var templateOne = React.createElement(
     )
 );
 var count = 0;
+var addOne = function addOne() {
+    console.log('Add One');
+};
 var templateTwo = React.createElement(
     'div',
     null,
@@ -48,11 +51,11 @@ var templateTwo = React.createElement(
     ),
     React.createElement(
         'button',
-        { id: 'myID', className: 'Button' },
+        { onClick: addOne },
         '+1'
     )
 );
-
+console.log(templateTwo);
 var appRoot = document.getElementById('app');
 
 //This says we wanna render that template in that element. 
