@@ -17,9 +17,17 @@ const templateOne = (
         </ol>
  </div>
  )
+
+
+
+
+
+
+
  let count = 0 
  const addOne = () =>{
-     console.log('Add One')
+     count++
+     console.log('Add One', count)
  }
  const minusOne = () => {
      console.log('Minus One')
@@ -27,22 +35,21 @@ const templateOne = (
  const reset = () => {
      console.log('Reset')
  }
-const templateTwo = (
-    <div>
-        <h1>Count: {count}</h1>
-        <button onClick = {addOne}>+1</button> 
-        <button onClick = {minusOne}>-1</button> 
-        <button onClick = {reset}>Reset</button> 
-    </div>
-)
-console.log(templateTwo)
+
 const appRoot = document.getElementById('app')
 
-
-
-
-
-
-//This says we wanna render that template in that element. 
-ReactDOM.render(templateTwo, appRoot)
+const renderCounterApp = () => {
+    const templateTwo = (
+        <div>
+            <h1>Count: {count}</h1>
+            <button onClick = {addOne}>+1</button> 
+            <button onClick = {minusOne}>-1</button> 
+            <button onClick = {reset}>Reset</button> 
+        </div>
+    )
+    ReactDOM.render(templateTwo, appRoot)
+    //This says we wanna render that template in that element. 
+    // ReactDOM.render(templateTwo, appRoot)
+}
+renderCounterApp()
 
