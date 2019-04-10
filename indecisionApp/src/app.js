@@ -20,6 +20,9 @@ const template = (
             <li>IS this gonna work?</li>
             <li>So that one worked? why did this one break?</li>
         </ol>
+        <form>
+        <input type ="text" name="option"></input>
+        </form>
  </div>
  )
 const appRoot = document.getElementById('app')

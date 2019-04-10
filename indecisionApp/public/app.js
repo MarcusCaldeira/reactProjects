@@ -38,6 +38,11 @@ var app = {
             null,
             'So that one worked? why did this one break?'
         )
+    ),
+    React.createElement(
+        'form',
+        null,
+        React.createElement('input', { type: 'text', name: 'option' })
     )
 );
 var appRoot = document.getElementById('app');
