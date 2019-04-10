@@ -12,7 +12,7 @@ const app = {
     options:['one','two']
 }
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
-const templateOne = (
+const template = (
 <div>
     <h1>Changed this a bit to early</h1>    
         <p>SO why do you need to be wrapped.</p>
@@ -23,4 +23,4 @@ const templateOne = (
  </div>
  )
 const appRoot = document.getElementById('app')
-ReactDOM.render(templateOne, app)
+ReactDOM.render(template, appRoot)
