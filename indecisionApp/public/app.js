@@ -27,7 +27,6 @@ var onFormSubmit = function onFormSubmit(e) {
 
 
 var appRoot = document.getElementById('app');
-
 var render = function render() {
     var template = React.createElement(
         'div',
@@ -35,12 +34,17 @@ var render = function render() {
         React.createElement(
             'h1',
             null,
-            'Changed this a bit to early'
+            app.title
+        ),
+        app.subtitle && React.createElement(
+            'p',
+            null,
+            app.subtitle
         ),
         React.createElement(
             'p',
             null,
-            'SO why do you need to be wrapped.'
+            app.options.length > 0 ? 'Here are your options' : 'No Options'
         ),
         React.createElement(
             'p',

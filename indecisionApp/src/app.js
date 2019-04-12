@@ -28,13 +28,12 @@ const onFormSubmit = (e) =>{
 
 
 const appRoot = document.getElementById('app')
-
-
 const render = () =>{
     const template = (
         <div>
-            <h1>Changed this a bit to early</h1>    
-                <p>SO why do you need to be wrapped.</p>
+            <h1>{app.title}</h1>    
+                {app.subtitle && <p>{app.subtitle}</p>}
+                <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
                 <ol>
                     <li>IS this gonna work?</li>
