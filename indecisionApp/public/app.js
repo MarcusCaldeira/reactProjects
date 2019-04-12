@@ -56,6 +56,11 @@ var render = function render() {
         ),
         React.createElement(
             'button',
+            null,
+            'This is the one you want'
+        ),
+        React.createElement(
+            'button',
             { onClick: onRemoveAll },
             'Remove All'
         ),

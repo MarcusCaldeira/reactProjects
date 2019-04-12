@@ -37,6 +37,7 @@ const render = () =>{
                 {app.subtitle && <p>{app.subtitle}</p>}
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
+                <button>This is the one you want</button>
                 <button onClick={onRemoveAll}>Remove All</button>
                 <ol> 
                 {
