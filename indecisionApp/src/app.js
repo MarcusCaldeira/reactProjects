@@ -27,6 +27,10 @@ const onRemoveAll = (e) => {
     app.options = []
     render()
 }
+const onMakeDecision= (e) => {
+    const randomNum = Math.random()
+    console.log(randomNum)
+}
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
 const appRoot = document.getElementById('app')
 const options= []
@@ -36,8 +40,7 @@ const render = () =>{
             <h1>{app.title}</h1>    
                 {app.subtitle && <p>{app.subtitle}</p>}
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
-                <p>{app.options.length}</p>
-                <button>This is the one you want</button>
+                <button onClick={onMakeDecision}>What Should I Do?</button>
                 <button onClick={onRemoveAll}>Remove All</button>
                 <ol> 
                 {

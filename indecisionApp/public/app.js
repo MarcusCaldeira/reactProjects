@@ -27,6 +27,10 @@ var onRemoveAll = function onRemoveAll(e) {
     app.options = [];
     render();
 };
+var onMakeDecision = function onMakeDecision(e) {
+    var randomNum = Math.random();
+    console.log(randomNum);
+};
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
 var appRoot = document.getElementById('app');
 var options = [];
@@ -50,14 +54,9 @@ var render = function render() {
             app.options.length > 0 ? 'Here are your options' : 'No Options'
         ),
         React.createElement(
-            'p',
-            null,
-            app.options.length
-        ),
-        React.createElement(
             'button',
-            null,
-            'This is the one you want'
+            { onClick: onMakeDecision },
+            'What Should I Do?'
         ),
         React.createElement(
             'button',
