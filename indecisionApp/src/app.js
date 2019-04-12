@@ -40,9 +40,7 @@ const render = () =>{
                 <button onClick={onRemoveAll}>Remove All</button>
                 <ol> 
                 {
-                    app.options.map((option) => {
-                        return <li key = {option}>Options: {option}</li>
-                    })
+                    app.options.map((option) => <li key = {option}>Options: {option}</li>)
                 }
                 </ol>
                 <form onSubmit={onFormSubmit}>
