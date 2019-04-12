@@ -23,10 +23,11 @@ const onFormSubmit = (e) =>{
     }
 
 }
+const onRemoveAll = (e) => {
+    app.options = []
+    render()
+}
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
-
-
-
 const appRoot = document.getElementById('app')
 const render = () =>{
     const template = (
@@ -35,6 +36,7 @@ const render = () =>{
                 {app.subtitle && <p>{app.subtitle}</p>}
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
+                <button onClick={onRemoveAll}>Remove All</button>
                 <ol>
                     <li>IS this gonna work?</li>
                     <li>So that one worked? why did this one break?</li>

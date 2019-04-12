@@ -23,9 +23,11 @@ var onFormSubmit = function onFormSubmit(e) {
         render();
     }
 };
+var onRemoveAll = function onRemoveAll(e) {
+    app.options = [];
+    render();
+};
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
-
-
 var appRoot = document.getElementById('app');
 var render = function render() {
     var template = React.createElement(
@@ -50,6 +52,11 @@ var render = function render() {
             'p',
             null,
             app.options.length
+        ),
+        React.createElement(
+            'button',
+            { onClick: onRemoveAll },
+            'Remove All'
         ),
         React.createElement(
             'ol',
