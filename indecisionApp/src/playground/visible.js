@@ -1,11 +1,27 @@
 console.log('Visible App is running')
 
-const appRoot = document.getElementById('app')
-const visible = (
-    <div>
-        <p>THIS IS GONNA HIDE</p>
-        <button>HIDE THINGS</button>
-    </div>
-)
+let visibilty = false
+const toggleVisibilty = () => {
+    visibilty = !visibilty
+    render()
+}
 
-ReactDOM.render(visible,appRoot)
+const render = () => {
+    const jsx = (
+        <div>
+            <p>Toggle</p>
+            <button onClick={toggleVisibilty}> 
+            {visibilty ? 'Hide Details': 'Show Details'}
+            </button>
+            {visibilty && (
+                <div>
+                <p>GO ON HIDE ME</p>
+                </div>
+            )}
+        </div>
+    )
+    ReactDOM.render(jsx, document.getElementById('app'))
+}
+
+
+render()
