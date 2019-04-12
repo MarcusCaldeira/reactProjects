@@ -28,8 +28,9 @@ var onRemoveAll = function onRemoveAll(e) {
     render();
 };
 var onMakeDecision = function onMakeDecision(e) {
-    var randomNum = Math.random();
-    console.log(randomNum);
+    var randomNum = Math.floor(Math.random() * app.options.length);
+    var option = app.options[randomNum];
+    alert(option);
 };
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
 var appRoot = document.getElementById('app');
