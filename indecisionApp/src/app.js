@@ -29,6 +29,7 @@ const onRemoveAll = (e) => {
 }
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
 const appRoot = document.getElementById('app')
+const options= []
 const render = () =>{
     const template = (
         <div>
@@ -37,12 +38,17 @@ const render = () =>{
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
                 <button onClick={onRemoveAll}>Remove All</button>
+                {/*
+                   numbers.map((number ) => {
+                       return <p key = {number}>Number: {number}</p>
+                   })
+                */} 
+                <ol> 
                 {
-                    [<p key ='1'>a</p>,<p key = '2'>b</p>,<p key = '3'>c</p>]
+                    app.options.map((option) => {
+                        return <li key = {option}>Options: {option}</li>
+                    })
                 }
-                <ol>
-                    <li>IS this gonna work?</li>
-                    <li>So that one worked? why did this one break?</li>
                 </ol>
                 <form onSubmit={onFormSubmit}>
                 <input type ="text" name="option"></input>

@@ -29,6 +29,7 @@ var onRemoveAll = function onRemoveAll(e) {
 };
 // In JSX you can have many JSX Expressions they just have to be wrapped in a single root element. 
 var appRoot = document.getElementById('app');
+var options = [];
 var render = function render() {
     var template = React.createElement(
         'div',
@@ -58,32 +59,17 @@ var render = function render() {
             { onClick: onRemoveAll },
             'Remove All'
         ),
-        [React.createElement(
-            'p',
-            { key: '1' },
-            'a'
-        ), React.createElement(
-            'p',
-            { key: '2' },
-            'b'
-        ), React.createElement(
-            'p',
-            { key: '3' },
-            'c'
-        )],
         React.createElement(
             'ol',
             null,
-            React.createElement(
-                'li',
-                null,
-                'IS this gonna work?'
-            ),
-            React.createElement(
-                'li',
-                null,
-                'So that one worked? why did this one break?'
-            )
+            app.options.map(function (option) {
+                return React.createElement(
+                    'li',
+                    { key: option },
+                    'Options: ',
+                    option
+                );
+            })
         ),
         React.createElement(
             'form',
