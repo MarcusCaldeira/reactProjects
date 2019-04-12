@@ -58,6 +58,7 @@ var render = function render() {
             { onClick: onRemoveAll },
             'Remove All'
         ),
+        ['listItem1', 'listItem2', 'listItem3'],
         React.createElement(
             'ol',
             null,

@@ -37,6 +37,9 @@ const render = () =>{
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
                 <button onClick={onRemoveAll}>Remove All</button>
+                {
+                    ['listItem1', 'listItem2', 'listItem3']
+                }
                 <ol>
                     <li>IS this gonna work?</li>
                     <li>So that one worked? why did this one break?</li>
