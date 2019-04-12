@@ -38,11 +38,6 @@ const render = () =>{
                 <p>{app.options.length > 0 ? 'Here are your options' : 'No Options'}</p>
                 <p>{app.options.length}</p>
                 <button onClick={onRemoveAll}>Remove All</button>
-                {/*
-                   numbers.map((number ) => {
-                       return <p key = {number}>Number: {number}</p>
-                   })
-                */} 
                 <ol> 
                 {
                     app.options.map((option) => {
