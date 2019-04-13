@@ -2,9 +2,10 @@
 
 console.log('Visible App is running');
 
-var visibilty = false;
+var visbilty = false;
 var toggleVisibilty = function toggleVisibilty() {
-    visibilty = !visibilty;
+    //Takes the current visibilty value and flip it from true to false(When clicked)
+    visbilty = !visbilty;
     render();
 };
 
@@ -13,22 +14,22 @@ var render = function render() {
         'div',
         null,
         React.createElement(
-            'p',
+            'h1',
             null,
-            'Toggle'
+            'visbilty toggle'
         ),
         React.createElement(
             'button',
             { onClick: toggleVisibilty },
-            visibilty ? 'Hide Details' : 'Show Details'
+            visbilty ? 'HIDE ME' : 'SHOW ME'
         ),
-        visibilty && React.createElement(
+        visbilty && React.createElement(
             'div',
             null,
             React.createElement(
                 'p',
                 null,
-                'GO ON HIDE ME'
+                'these are some details'
             )
         )
     );

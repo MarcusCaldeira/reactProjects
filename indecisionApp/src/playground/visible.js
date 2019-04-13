@@ -1,21 +1,24 @@
 console.log('Visible App is running')
 
-let visibilty = false
+let visbilty = false
 const toggleVisibilty = () => {
-    visibilty = !visibilty
+    //Takes the current visibilty value and flip it from true to false(When clicked)
+    visbilty = !visbilty
     render()
 }
 
 const render = () => {
     const jsx = (
         <div>
-            <p>Toggle</p>
-            <button onClick={toggleVisibilty}> 
-            {visibilty ? 'Hide Details': 'Show Details'}
+            <h1>visbilty toggle</h1>
+            <button onClick = {toggleVisibilty}>
+            {visbilty ? 'HIDE ME': 'SHOW ME'}
             </button>
-            {visibilty && (
+            {visbilty && (
                 <div>
-                <p>GO ON HIDE ME</p>
+                    <p>
+                    these are some details
+                    </p>
                 </div>
             )}
         </div>
@@ -25,3 +28,5 @@ const render = () => {
 
 
 render()
+
+
