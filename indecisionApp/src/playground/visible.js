@@ -17,7 +17,7 @@ const render = () => {
             {visbilty && (
                 <div>
                     <p>
-                    these are some details
+                    these are some detailsç
                     </p>
                 </div>
             )}
