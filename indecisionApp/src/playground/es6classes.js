@@ -1,8 +1,8 @@
 class Person {
-    constructor(name){
+    constructor(){
         console.log('test')
     }
-
 }
 
-const me = new Person()
+const me = new Person('Marcus Caldeira')
+console.log(me)
