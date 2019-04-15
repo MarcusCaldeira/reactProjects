@@ -1,6 +1,6 @@
 class Person {
-    constructor(){
-        console.log('test')
+    constructor(name){
+        this.name = name
     }
 }
 
