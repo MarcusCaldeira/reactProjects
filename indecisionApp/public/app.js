@@ -29,7 +29,7 @@ var IndecisionApp = function (_React$Component) {
                 null,
                 React.createElement(Header, null),
                 React.createElement(Action, null),
-                React.createElement(Option, null),
+                React.createElement(Options, null),
                 React.createElement(AddOption, null)
             );
         }
@@ -104,8 +104,36 @@ var Action = function (_React$Component3) {
 //This Class renders Options Class
 
 
-var Option = function (_React$Component4) {
-    _inherits(Option, _React$Component4);
+var Options = function (_React$Component4) {
+    _inherits(Options, _React$Component4);
+
+    function Options() {
+        _classCallCheck(this, Options);
+
+        return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+    }
+
+    _createClass(Options, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'p',
+                    null,
+                    'Options Component Here'
+                ),
+                React.createElement(Option, null)
+            );
+        }
+    }]);
+
+    return Options;
+}(React.Component);
+
+var Option = function (_React$Component5) {
+    _inherits(Option, _React$Component5);
 
     function Option() {
         _classCallCheck(this, Option);
@@ -120,12 +148,9 @@ var Option = function (_React$Component4) {
                 'div',
                 null,
                 React.createElement(
-                    'ol',
+                    'p',
                     null,
-                    React.createElement('li', null),
-                    React.createElement('li', null),
-                    React.createElement('li', null),
-                    React.createElement('li', null)
+                    'This is an option'
                 )
             );
         }
@@ -133,11 +158,12 @@ var Option = function (_React$Component4) {
 
     return Option;
 }(React.Component);
+
 //This renders the form for submission
 
 
-var AddOption = function (_React$Component5) {
-    _inherits(AddOption, _React$Component5);
+var AddOption = function (_React$Component6) {
+    _inherits(AddOption, _React$Component6);
 
     function AddOption() {
         _classCallCheck(this, AddOption);

@@ -7,7 +7,7 @@ class IndecisionApp extends React.Component {
             <div>
                 <Header />
                 <Action />
-                <Option />
+                <Options />
                 <AddOption />
             
             </div>
@@ -39,20 +39,27 @@ class Action extends React.Component{
     }
 }
 //This Class renders Options Class
-class Option extends React.Component{
+class Options extends React.Component{
     render(){
         return(
             <div>
-                <ol>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ol>
+               <p>Options Component Here</p>
+               <Option />
             </div>
         )
     }
 }
+class Option extends React.Component{
+    render(){
+        return(
+            <div>
+                <p>This is an option</p>
+            </div>
+        )
+    }
+}
+
+
 //This renders the form for submission
 class AddOption extends React.Component{
     render(){
