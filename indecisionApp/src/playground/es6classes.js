@@ -3,7 +3,9 @@ class Person {
         this.name = name
     }
     getGreeting(){
-        return 'Hey there hows its going? ' + this.name
+        // return 'Hey there hows its going? ' + this.name + ' WOWZA YOURE HERE'
+        //ES6 Template String Feature
+        return `Hi I am ${this.name}`
     }
 }
 
