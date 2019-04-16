@@ -23,9 +23,18 @@ var Header = function (_React$Component) {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'p',
+                'div',
                 null,
-                'This is from Header'
+                React.createElement(
+                    'h1',
+                    null,
+                    'Indecision App'
+                ),
+                React.createElement(
+                    'h2',
+                    null,
+                    'Let this app decide what you should do?'
+                )
             );
         }
     }]);
@@ -33,15 +42,38 @@ var Header = function (_React$Component) {
     return Header;
 }(React.Component);
 
+var Action = function (_React$Component2) {
+    _inherits(Action, _React$Component2);
+
+    function Action() {
+        _classCallCheck(this, Action);
+
+        return _possibleConstructorReturn(this, (Action.__proto__ || Object.getPrototypeOf(Action)).apply(this, arguments));
+    }
+
+    _createClass(Action, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'button',
+                    null,
+                    'What Should I do?'
+                )
+            );
+        }
+    }]);
+
+    return Action;
+}(React.Component);
+
 var jsx = React.createElement(
     'div',
     null,
-    React.createElement(
-        'h1',
-        null,
-        'TItle'
-    ),
-    React.createElement(Header, null)
+    React.createElement(Header, null),
+    React.createElement(Action, null)
 );
 
 ReactDOM.render(jsx, document.getElementById('app'));
