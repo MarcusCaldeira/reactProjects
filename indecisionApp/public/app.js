@@ -80,10 +80,21 @@ var Traveler = function (_Person2) {
         return _this2;
     }
 
+    _createClass(Traveler, [{
+        key: 'getGreeting',
+        value: function getGreeting() {
+            var greeting = _get(Traveler.prototype.__proto__ || Object.getPrototypeOf(Traveler.prototype), 'getGreeting', this);
+            if (this.homeLocation) {
+                greeting += ' I am visting from ' + this.homeLocation + '.';
+            }
+            return greeting;
+        }
+    }]);
+
     return Traveler;
 }(Person);
 
 var me = new Traveler('Marcus Caldeira', 26, 'Saint Paul');
-console.log(me);
+console.log(me.getGreeting());
 var other = new Traveler();
-console.log(other);
+console.log(other.getGreeting());
