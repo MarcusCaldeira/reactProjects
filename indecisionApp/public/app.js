@@ -72,6 +72,73 @@ var Action = function (_React$Component2) {
 
     return Action;
 }(React.Component);
+//This Class renders Options Class
+
+
+var Option = function (_React$Component3) {
+    _inherits(Option, _React$Component3);
+
+    function Option() {
+        _classCallCheck(this, Option);
+
+        return _possibleConstructorReturn(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
+    }
+
+    _createClass(Option, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'ol',
+                    null,
+                    React.createElement('li', null),
+                    React.createElement('li', null),
+                    React.createElement('li', null),
+                    React.createElement('li', null)
+                )
+            );
+        }
+    }]);
+
+    return Option;
+}(React.Component);
+//This renders the form for submission
+
+
+var AddOption = function (_React$Component4) {
+    _inherits(AddOption, _React$Component4);
+
+    function AddOption() {
+        _classCallCheck(this, AddOption);
+
+        return _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).apply(this, arguments));
+    }
+
+    _createClass(AddOption, [{
+        key: 'render',
+        value: function render() {
+            return React.createElement(
+                'div',
+                null,
+                React.createElement(
+                    'h3',
+                    null,
+                    'Add Something Here!'
+                ),
+                React.createElement(
+                    'form',
+                    null,
+                    React.createElement('input', { type: 'text' })
+                )
+            );
+        }
+    }]);
+
+    return AddOption;
+}(React.Component);
+
 //This is displaying the react element.
 
 
@@ -79,7 +146,9 @@ var jsx = React.createElement(
     'div',
     null,
     React.createElement(Header, null),
-    React.createElement(Action, null)
+    React.createElement(Action, null),
+    React.createElement(Option, null),
+    React.createElement(AddOption, null)
 );
 //This grabs the element on the page. 
 ReactDOM.render(jsx, document.getElementById('app'));

@@ -23,11 +23,47 @@ class Action extends React.Component{
         )
     }
 }
+//This Class renders Options Class
+class Option extends React.Component{
+    render(){
+        return(
+            <div>
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>
+        )
+    }
+}
+//This renders the form for submission
+class AddOption extends React.Component{
+    render(){
+        return(
+            <div>
+                <h3>Add Something Here!</h3>
+                <form>
+                    <input type="text">
+                    
+                    </input>
+                </form>
+            </div>
+        )
+    }
+}
+
+
+
+
 //This is displaying the react element.
 const jsx = (
     <div>
         <Header />
         <Action />
+        <Option />
+        <AddOption />
     </div>
 )
 //This grabs the element on the page. 
