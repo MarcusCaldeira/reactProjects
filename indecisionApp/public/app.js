@@ -68,7 +68,22 @@ var Student = function (_Person) {
     return Student;
 }(Person);
 
-var me = new Student('Marcus Caldeira', 26, 'Computer Science');
-console.log(me.getDescription());
-var other = new Student();
-console.log(other.getDescription());
+var Traveler = function (_Person2) {
+    _inherits(Traveler, _Person2);
+
+    function Traveler(name, age, homeLocation) {
+        _classCallCheck(this, Traveler);
+
+        var _this2 = _possibleConstructorReturn(this, (Traveler.__proto__ || Object.getPrototypeOf(Traveler)).call(this, name, age));
+
+        _this2.homeLocation = homeLocation;
+        return _this2;
+    }
+
+    return Traveler;
+}(Person);
+
+var me = new Traveler('Marcus Caldeira', 26, 'Saint Paul');
+console.log(me);
+var other = new Traveler();
+console.log(other);

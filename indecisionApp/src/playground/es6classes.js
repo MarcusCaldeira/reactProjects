@@ -28,10 +28,17 @@ class Student extends Person {
     }
 
 }
+class Traveler extends Person{
+    constructor(name, age, homeLocation){
+        super(name, age)
+        this.homeLocation = homeLocation
+    }
+
+}
 
 
-const me = new Student('Marcus Caldeira', 26, 'Computer Science')
-console.log(me.getDescription())
-const other = new Student()
-console.log(other.getDescription());
+const me = new Traveler('Marcus Caldeira', 26, 'Saint Paul')
+console.log(me)
+const other = new Traveler()
+console.log(other)
 
