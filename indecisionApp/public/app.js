@@ -47,10 +47,22 @@ var Student = function (_Person) {
         return _this;
     }
 
+    _createClass(Student, [{
+        key: 'hasMajor',
+        value: function hasMajor() {
+            return !!this.major;
+        }
+    }, {
+        key: 'getDescription',
+        value: function getDescription() {
+            return 'Testing';
+        }
+    }]);
+
     return Student;
 }(Person);
 
 var me = new Student('Marcus Caldeira', 26, 'Computer Science');
-console.log(me);
+console.log(me.getDescription());
 var other = new Student();
-console.log(other);
+console.log(other.getDescription());
