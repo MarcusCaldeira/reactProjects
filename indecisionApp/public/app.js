@@ -16,7 +16,7 @@ var Person = function () {
     _createClass(Person, [{
         key: 'getGreeting',
         value: function getGreeting() {
-            return 'Hi!';
+            return 'Hey there hows its going? ' + this.name;
         }
     }]);
 
@@ -24,6 +24,6 @@ var Person = function () {
 }();
 
 var me = new Person('Marcus Caldeira');
-console.log(me.getGreeting);
+console.log(me.getGreeting());
 var other = new Person();
-console.log(other);
+console.log(other.getGreeting());

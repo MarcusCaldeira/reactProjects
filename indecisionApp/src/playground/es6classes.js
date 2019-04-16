@@ -3,13 +3,13 @@ class Person {
         this.name = name
     }
     getGreeting(){
-        return 'Hi!'
+        return 'Hey there hows its going? ' + this.name
     }
 }
 
 
 const me = new Person('Marcus Caldeira')
-console.log(me.getGreeting)
+console.log(me.getGreeting())
 const other = new Person()
-console.log(other);
+console.log(other.getGreeting());
 
