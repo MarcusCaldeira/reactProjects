@@ -1,5 +1,7 @@
 console.log('App is running')
 
+
+//This is the header to display upper part of app
 class Header extends React.Component {
     render(){
         return(
@@ -11,6 +13,7 @@ class Header extends React.Component {
     }
 
 }
+//This class extends the button on the html page. 
 class Action extends React.Component{
     render(){
         return(
@@ -20,11 +23,12 @@ class Action extends React.Component{
         )
     }
 }
+//This is displaying the react element.
 const jsx = (
     <div>
         <Header />
         <Action />
     </div>
 )
-
+//This grabs the element on the page. 
 ReactDOM.render(jsx, document.getElementById('app'))

@@ -10,6 +10,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 console.log('App is running');
 
+//This is the header to display upper part of app
+
 var Header = function (_React$Component) {
     _inherits(Header, _React$Component);
 
@@ -41,6 +43,8 @@ var Header = function (_React$Component) {
 
     return Header;
 }(React.Component);
+//This class extends the button on the html page. 
+
 
 var Action = function (_React$Component2) {
     _inherits(Action, _React$Component2);
@@ -68,6 +72,8 @@ var Action = function (_React$Component2) {
 
     return Action;
 }(React.Component);
+//This is displaying the react element.
+
 
 var jsx = React.createElement(
     'div',
@@ -75,5 +81,5 @@ var jsx = React.createElement(
     React.createElement(Header, null),
     React.createElement(Action, null)
 );
-
+//This grabs the element on the page. 
 ReactDOM.render(jsx, document.getElementById('app'));
