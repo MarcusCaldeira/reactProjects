@@ -8,13 +8,20 @@ class Person {
         return `Hi I am ${this.name}`
     }
     getDescription(){
-        return `Hi my name is ${this.name} +  and I am  + ${this.age}`
+        return `Hi my name is ${this.name} and I am ${this.age}`
     }
+} 
+class Student extends Person {
+    constructor(name, age, major){
+        super(name, age)
+        this.major = major
+    }
+
 }
 
 
-const me = new Person('Marcus Caldeira', 26)
-console.log(me.getDescription())
-const other = new Person()
-console.log(other.getDescription());
+const me = new Student('Marcus Caldeira', 26, 'Computer Science')
+console.log(me)
+const other = new Student()
+console.log(other);
 
