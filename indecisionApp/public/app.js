@@ -12,3 +12,6 @@ var Person = function Person() {
 
 var me = new Person('Marcus Caldeira');
 console.log(me);
+var other = new Person();
+console.log(other);
+console.log('wowowowo');

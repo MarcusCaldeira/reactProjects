@@ -8,5 +8,6 @@ class Person {
 const me = new Person('Marcus Caldeira')
 console.log(me)
 const other = new Person()
-console.log(other)
+console.log(other);
+console.log('wowowowo')
 
