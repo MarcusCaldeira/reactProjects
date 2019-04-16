@@ -1,5 +1,20 @@
 console.log('App is running')
 
+//This is a nested class - Its pulling the other components into the mix.
+class IndecisionApp extends React.Component {
+    render(){
+        return(
+            <div>
+                <Header />
+                <Action />
+                <Option />
+                <AddOption />
+            
+            </div>
+        )
+    }
+}
+
 
 //This is the header to display upper part of app
 class Header extends React.Component {
@@ -57,14 +72,6 @@ class AddOption extends React.Component{
 
 
 
-//This is displaying the react element.
-const jsx = (
-    <div>
-        <Header />
-        <Action />
-        <Option />
-        <AddOption />
-    </div>
-)
+
 //This grabs the element on the page. 
-ReactDOM.render(jsx, document.getElementById('app'))
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
