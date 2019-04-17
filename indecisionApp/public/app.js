@@ -52,6 +52,21 @@ var Counter = function (_React$Component) {
     }
 
     _createClass(Counter, [{
+        key: 'handleAddOne',
+        value: function handleAddOne() {
+            console.log('ADDING ONE');
+        }
+    }, {
+        key: 'handleMinusOne',
+        value: function handleMinusOne() {
+            console.log('SUBTRACTING ONE');
+        }
+    }, {
+        key: 'handleReset',
+        value: function handleReset() {
+            console.log('Clearing your options');
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(

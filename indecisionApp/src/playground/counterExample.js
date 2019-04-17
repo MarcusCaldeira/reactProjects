@@ -35,6 +35,16 @@ console.log('Counter Example Template')
 
 
 class Counter extends React.Component{
+    handleAddOne(){
+        console.log('ADDING ONE')
+    }
+    handleMinusOne(){
+        console.log('SUBTRACTING ONE')
+    }
+    handleReset(){
+        console.log('Clearing your options')
+    }
+
     render(){
         return(
             <div>
