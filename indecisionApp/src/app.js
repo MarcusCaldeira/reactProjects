@@ -33,10 +33,13 @@ class Header extends React.Component {
 }
 //This class extends the button on the html page. 
 class Action extends React.Component{
+    handlePick(){
+
+    }
     render(){
         return(
         <div>
-            <button>What Should I do?</button>
+            <button onClick = {this.handlePick}>What Should I do?</button>
         </div>
         )
     }
