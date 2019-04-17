@@ -26,12 +26,13 @@ var IndecisionApp = function (_React$Component) {
         value: function render() {
             var title = 'Indecision App';
             var subTitle = 'Let this app decide what you should do';
+            var options = ['thing one', 'thing two', 'thing three'];
             return React.createElement(
                 'div',
                 null,
                 React.createElement(Header, { title: title, subTitle: subTitle }),
                 React.createElement(Action, null),
-                React.createElement(Options, null),
+                React.createElement(Options, { options: options }),
                 React.createElement(AddOption, null)
             );
         }
@@ -121,11 +122,14 @@ var Options = function (_React$Component4) {
             return React.createElement(
                 'div',
                 null,
-                React.createElement(
-                    'p',
-                    null,
-                    'Options Component Here'
-                ),
+                this.props.options.map(function (options) {
+                    return React.createElement(
+                        'p',
+                        { key: options },
+                        ' ',
+                        options
+                    );
+                }),
                 React.createElement(Option, null)
             );
         }

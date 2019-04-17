@@ -5,11 +5,12 @@ class IndecisionApp extends React.Component {
     render(){
         const title = 'Indecision App'
         const subTitle = 'Let this app decide what you should do'
+        const options = ['thing one', 'thing two', 'thing three']
         return(
             <div>
                 <Header title = {title} subTitle = {subTitle}/>
                 <Action />
-                <Options />
+                <Options options = {options} />
                 <AddOption />
             
             </div>
@@ -45,7 +46,9 @@ class Options extends React.Component{
     render(){
         return(
             <div>
-               <p>Options Component Here</p>
+               {
+                   this.props.options.map((options) => <p key = {options}> {options}</p>)
+               }
                <Option />
             </div>
         )
