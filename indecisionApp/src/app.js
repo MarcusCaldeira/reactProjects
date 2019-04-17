@@ -3,9 +3,11 @@ console.log('App is running')
 //This is a nested class - Its pulling the other components into the mix.
 class IndecisionApp extends React.Component {
     render(){
+        const title = 'Indecision App'
+        const subTitle = 'Let this app decide what you should do'
         return(
             <div>
-                <Header title = "testValue" />
+                <Header title = {title} subTitle = {subTitle}/>
                 <Action />
                 <Options />
                 <AddOption />
@@ -19,11 +21,10 @@ class IndecisionApp extends React.Component {
 //This is the header to display upper part of app
 class Header extends React.Component {
     render(){
-        console.log(this.props)
         return( 
             <div>
-                <h1>Indecision App</h1>
-                <h2>Let this app decide what you should do?</h2>
+                <h1>{this.props.title}</h1>
+                <h2>{this.props.subTitle}</h2>
             </div>
         )
     }
