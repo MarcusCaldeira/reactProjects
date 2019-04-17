@@ -75,15 +75,20 @@ class Option extends React.Component{
 
 //This renders the form for submission
 class AddOption extends React.Component{
-    onSubmit(event){
-        alert('this is working')
+    onSubmit(e){
+        e.preventDefault()
+
+        const option = e.target.elements.option.value.trim()
+        if(option){
+            alert(option)
+        }
     }
     render(){
         return(
             <div>
                 <h3>Add Something Here!</h3>
                 <form onSubmit={this.onSubmit}>
-                    <input type="text"></input>
+                    <input type="text" name="option"></input>
                     <button>This Needs To Be Added To My List</button>
                 </form>
             </div>
