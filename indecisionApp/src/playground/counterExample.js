@@ -35,6 +35,13 @@ console.log('Counter Example Template')
 
 
 class Counter extends React.Component{
+    constructor(props){
+        super(props)
+        this.handleAddOne=this.handleAddOne.bind(this)
+        this.handleMinusOne=this.handleMinusOne.bind(this)
+        this.handleReset=this.handleReset.bind(this)
+
+    }
     handleAddOne(){
         console.log('ADDING ONE')
     }
@@ -49,9 +56,9 @@ class Counter extends React.Component{
         return(
             <div>
                 <h1>Count: </h1>
-                <button>+1</button>
-                <button>-1</button>
-                <button>Clear</button>
+                <button onClick={this.handleAddOne}>+1</button>
+                <button onClick={this.handleMinusOne}>-1</button>
+                <button onClick={this.handleReset}>Clear</button>
             </div>
         )
     }
