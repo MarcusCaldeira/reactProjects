@@ -1,3 +1,13 @@
+const obj = {
+    name: "Marcus",
+    getName(){
+        return this.name
+    }
+}
+console.log(obj.getName())
+
+const getName = obj.getName.bind(obj)
+console.log(getName())
 console.log('App is running')
 
 //This is a nested class - Its pulling the other components into the mix.
@@ -48,12 +58,13 @@ class Action extends React.Component{
 //This Class renders Options Class
 class Options extends React.Component{
     handleRemoveAll(){
-        alert('REmove')
+        console.log(this.props.options )
+        // alert('REmove')
     }
     render(){
         return(
             <div>
-            <button onClick ={this.handleRemoveAll}>CLEAR MY OPTIONS</button>
+            <button onClick ={this.handleRemoveAll.bind(this)}>CLEAR MY OPTIONS</button>
                {
                    this.props.options.map((options) => <Option key={options}  optionsText={options}/>)
                }
