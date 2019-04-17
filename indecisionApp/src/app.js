@@ -5,7 +5,7 @@ class IndecisionApp extends React.Component {
     render(){
         return(
             <div>
-                <Header />
+                <Header title = "testValue" />
                 <Action />
                 <Options />
                 <AddOption />
@@ -19,7 +19,8 @@ class IndecisionApp extends React.Component {
 //This is the header to display upper part of app
 class Header extends React.Component {
     render(){
-        return(
+        console.log(this.props)
+        return( 
             <div>
                 <h1>Indecision App</h1>
                 <h2>Let this app decide what you should do?</h2>
