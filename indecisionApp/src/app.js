@@ -12,15 +12,20 @@ console.log('App is running')
 
 //This is a nested class - Its pulling the other components into the mix.
 class IndecisionApp extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {
+            options: ['thing one', 'thing two', 'thing three']
+        }
+    }
     render(){
         const title = 'Indecision App'
         const subTitle = 'Let this app decide what you should do'
-        const options = ['thing one', 'thing two', 'thing three']
         return(
             <div>
                 <Header title = {title} subTitle = {subTitle}/>
-                <Action />
-                <Options options = {options} />
+                <Action hasOptions = {this.state.options.length > 0}/>
+                <Options options = {this.state.options} />
                 <AddOption />
             
             </div>
@@ -50,7 +55,12 @@ class Action extends React.Component{
     render(){
         return(
         <div>
-            <button onClick = {this.handlePick}>What Should I do?</button>
+            <button onClick = {this.handlePick}
+            disabled = {!this.props.hasOptions}
+            
+            >
+            What Should I do?
+            </button>
         </div>
         )
     }
