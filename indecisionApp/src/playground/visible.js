@@ -1,15 +1,9 @@
-console.log('Visible App is running')
-
-
-class visibilty extends React.Component{
-    constructor(props){
-        super(props)
-        this.handleToggle = this.handleToggle.bind(this)
-        this.state = {
-            show: false
-        }
+class Toggle extends React.Component{
+    render(){
+        return <p>Test</p>
     }
 }
+ReactDOM.render(<Toggle />, document.getElementById('app'))
 
 
 // let visbilty = false
