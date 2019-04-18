@@ -1,126 +1,56 @@
 'use strict';
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-//  let count = 0 
-//  const addOne = () =>{
-//      count++
-//      renderCounterApp()
-//  }
-//  const minusOne = () => {
-//      count--
-//      renderCounterApp()
-//  }
-//  const reset = () => {
-//      count = 0
-//      renderCounterApp()
-//  }
+console.log('Visible App is running');
 
-// const appRoot = document.getElementById('app')
+var visibilty = function (_React$Component) {
+    _inherits(visibilty, _React$Component);
 
-// const renderCounterApp = () => {
-//     const templateTwo = (
-//         <div>
-//             <h1>Count: {count}</h1>
-//             <button onClick = {addOne}>+1</button> 
-//             <button onClick = {minusOne}>-1</button> 
-//             <button onClick = {reset}>Reset</button> 
-//         </div>
-//     )
-//     ReactDOM.render(templateTwo, appRoot)
-//     //This says we wanna render that template in that element. 
-//     // ReactDOM.render(templateTwo, appRoot)
-// }
-// renderCounterApp()
+    function visibilty(props) {
+        _classCallCheck(this, visibilty);
 
+        var _this = _possibleConstructorReturn(this, (visibilty.__proto__ || Object.getPrototypeOf(visibilty)).call(this, props));
 
-console.log('Counter Example Template');
-
-var Counter = function (_React$Component) {
-    _inherits(Counter, _React$Component);
-
-    function Counter(props) {
-        _classCallCheck(this, Counter);
-
-        var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
-
-        _this.handleAddOne = _this.handleAddOne.bind(_this);
-        _this.handleMinusOne = _this.handleMinusOne.bind(_this);
-        _this.handleReset = _this.handleReset.bind(_this);
+        _this.handleToggle = _this.handleToggle.bind(_this);
         _this.state = {
-            count: 0
+            show: false
         };
-
         return _this;
     }
 
-    _createClass(Counter, [{
-        key: 'handleAddOne',
-        value: function handleAddOne() {
-            this.setState(function (prevState) {
-                return {
-                    count: prevState.count + 1
-                };
-            });
-        }
-    }, {
-        key: 'handleMinusOne',
-        value: function handleMinusOne() {
-            this.setState(function (prevState) {
-                return {
-                    count: prevState.count - 1
-                };
-            });
-        }
-    }, {
-        key: 'handleReset',
-        value: function handleReset() {
-            this.setState(function () {
-                return {
-                    count: 0
-                };
-            });
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return React.createElement(
-                'div',
-                null,
-                React.createElement(
-                    'h1',
-                    null,
-                    'Count:',
-                    this.state.count,
-                    ' '
-                ),
-                React.createElement(
-                    'button',
-                    { onClick: this.handleAddOne },
-                    '+1'
-                ),
-                React.createElement(
-                    'button',
-                    { onClick: this.handleMinusOne },
-                    '-1'
-                ),
-                React.createElement(
-                    'button',
-                    { onClick: this.handleReset },
-                    'Clear'
-                )
-            );
-        }
-    }]);
-
-    return Counter;
+    return visibilty;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Counter, null), document.getElementById('app'));
-console.log('WILL you work');
+// let visbilty = false
+// const toggleVisibilty = () => {
+//     //Takes the current visibilty value and flip it from true to false(When clicked)
+//     visbilty = !visbilty
+//     render()
+// }
+
+// const render = () => {
+//     const jsx = (
+//         <div>
+//             <h1>visbilty toggle</h1>
+//             <button onClick = {toggleVisibilty}>
+//             {visbilty ? 'HIDE ME': 'SHOW ME'}
+//             </button>
+//             {visbilty && (
+//                 <div>
+//                     <p>
+//                     these are some detailsç
+//                     </p>
+//                 </div>
+//             )}
+//         </div>
+//     )
+//     ReactDOM.render(jsx, document.getElementById('app'))
+// }
+
+
+// render()
