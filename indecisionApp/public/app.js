@@ -11,19 +11,52 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Toggle = function (_React$Component) {
     _inherits(Toggle, _React$Component);
 
-    function Toggle() {
+    function Toggle(props) {
         _classCallCheck(this, Toggle);
 
-        return _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Toggle.__proto__ || Object.getPrototypeOf(Toggle)).call(this, props));
+
+        _this.handleToggle = _this.handleToggle.bind(_this);
+        _this.state = {
+            visbilty: false
+        };
+        return _this;
     }
 
     _createClass(Toggle, [{
+        key: 'handleToggle',
+        value: function handleToggle() {
+            this.setState(function (oldState) {
+                return {
+                    visbilty: true
+                };
+            });
+        }
+    }, {
         key: 'render',
         value: function render() {
             return React.createElement(
-                'p',
+                'div',
                 null,
-                'Test'
+                React.createElement(
+                    'h1',
+                    null,
+                    'visbilty toggle'
+                ),
+                React.createElement(
+                    'button',
+                    { onClick: this.handleToggle },
+                    this.state.visbilty ? 'HIDE ME' : 'SHOW ME'
+                ),
+                this.state.visbilty && React.createElement(
+                    'div',
+                    null,
+                    React.createElement(
+                        'p',
+                        null,
+                        'these are some details'
+                    )
+                )
             );
         }
     }]);
@@ -41,21 +74,21 @@ ReactDOM.render(React.createElement(Toggle, null), document.getElementById('app'
 // }
 
 // const render = () => {
-//     const jsx = (
-//         <div>
-//             <h1>visbilty toggle</h1>
-//             <button onClick = {toggleVisibilty}>
-//             {visbilty ? 'HIDE ME': 'SHOW ME'}
-//             </button>
-//             {visbilty && (
-//                 <div>
-//                     <p>
-//                     these are some detailsç
-//                     </p>
-//                 </div>
-//             )}
-//         </div>
-//     )
+// const jsx = (
+//     <div>
+//         <h1>visbilty toggle</h1>
+//         <button onClick = {toggleVisibilty}>
+//         {visbilty ? 'HIDE ME': 'SHOW ME'}
+//         </button>
+//         {visbilty && (
+//             <div>
+//                 <p>
+//                 these are some detailsç
+//                 </p>
+//             </div>
+//         )}
+//     </div>
+// )
 //     ReactDOM.render(jsx, document.getElementById('app'))
 // }
 
