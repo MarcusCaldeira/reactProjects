@@ -14,9 +14,17 @@ console.log('App is running')
 class IndecisionApp extends React.Component {
     constructor(props){
         super(props)
+        this.handleDeleteOptions = this.handleDeleteOptions.bind(this)
         this.state = {
-            options: ['thing one', 'thing two', 'thing three']
+            options: ['this one', 'this two']
         }
+    }
+    handleDeleteOptions (){
+        this.setState(() => {
+            return {
+                options: []
+            }
+        })
     }
     render(){
         const title = 'Indecision App'
@@ -25,7 +33,11 @@ class IndecisionApp extends React.Component {
             <div>
                 <Header title = {title} subTitle = {subTitle}/>
                 <Action hasOptions = {this.state.options.length > 0}/>
-                <Options options = {this.state.options} />
+                <Options 
+                options = {this.state.options} 
+                handleDeleteOptions = {this.handleDeleteOptions}
+                
+                />
                 <AddOption />
             
             </div>
@@ -67,19 +79,10 @@ class Action extends React.Component{
 }
 //This Class renders Options Class
 class Options extends React.Component{
-    constructor(props){
-        super(props)
-        this.handleRemoveAll = this.handleRemoveAll.bind(this)
-
-    }
-    handleRemoveAll(){
-        console.log(this.props.options )
-        // alert('REmove')
-    }
     render(){
         return(
             <div>
-            <button onClick ={this.handleRemoveAll}>CLEAR MY OPTIONS</button>
+            <button onClick ={this.props.handleDeleteOptions}>CLEAR MY OPTIONS</button>
                {
                    this.props.options.map((options) => <Option key={options}  optionsText={options}/>)
                }
