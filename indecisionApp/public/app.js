@@ -63,7 +63,11 @@ var Counter = function (_React$Component) {
     _createClass(Counter, [{
         key: 'handleAddOne',
         value: function handleAddOne() {
-            console.log('ADDING ONE');
+            this.setState(function () {
+                return {
+                    count: 1
+                };
+            });
         }
     }, {
         key: 'handleMinusOne',
