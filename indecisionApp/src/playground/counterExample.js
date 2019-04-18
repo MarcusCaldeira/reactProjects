@@ -53,10 +53,18 @@ class Counter extends React.Component{
         })
     }
     handleMinusOne(){
-        console.log('SUBTRACTING ONE')
+        this.setState((prevState) => {
+            return { 
+                count: prevState.count -1
+            }
+        })
     }
     handleReset(){
-        console.log('Clearing your options')
+        this.setState(() => {
+            return {
+                count: 0 
+            }
+        })
     }
 
     render(){
