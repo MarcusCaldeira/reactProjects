@@ -137,5 +137,14 @@ class IndecisionApp extends React.Component {
       )
     }
   }
+
+  const User = () => {
+      return (
+          <div>
+            <p>Name: </p>
+            <p>Age: </p>
+          </div>
+      )
+  }
   
-  ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
+  ReactDOM.render(<User />, document.getElementById('app'))
