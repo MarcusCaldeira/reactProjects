@@ -256,24 +256,13 @@ var AddOption = function (_React$Component6) {
   return AddOption;
 }(React.Component);
 
-var User = function User(props) {
-  return React.createElement(
-    'div',
-    null,
-    React.createElement(
-      'p',
-      null,
-      'Name:',
-      props.name,
-      ' '
-    ),
-    React.createElement(
-      'p',
-      null,
-      'Age: ',
-      props.age
-    )
-  );
-};
+//   const User = (props) => {
+//       return (
+//           <div>
+//             <p>Name:{props.name} </p>
+//             <p>Age: {props.age}</p>
+//           </div>
+//       )
+//   }
 
-ReactDOM.render(React.createElement(User, { name: 'Marcus', age: '27' }), document.getElementById('app'));
+ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));
