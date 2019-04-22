@@ -16,7 +16,7 @@ class IndecisionApp extends React.Component {
         super(props)
         this.handleDeleteOptions = this.handleDeleteOptions.bind(this)
         this.handlePick = this.handlePick.bind(this)
-        this.HandleAddOption = this.handleAddOption.bind(this)
+        this.handleAddOption = this.handleAddOption.bind(this)
         this.state = {
             options: ['this one', 'this two']
         }
@@ -34,8 +34,7 @@ class IndecisionApp extends React.Component {
         alert(option)
     }
     handleAddOption(option){
-        console.log('WireMEUp')
-
+        console.log(option)
     }
     render(){
         const title = 'Indecision App'
@@ -114,15 +113,16 @@ class Option extends React.Component{
 
 
 // This renders the form for submission
-class HandleAddOption extends React.Component{
+class AddOption extends React.Component{
     constructor(props){
         super(props)
-        this.HandleAddOption = this.HandleAddOption
+        this.handleAddOption = this.handleAddOption.bind(this)
     }
     onSubmit(e){
         e.preventDefault()
 
         const option = e.target.elements.option.value.trim()
+         
         if(option){
             this.props.handleAddOption(option)
         }
