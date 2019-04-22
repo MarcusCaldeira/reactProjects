@@ -44,8 +44,10 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: 'handleAddOption',
     value: function handleAddOption(option) {
+      //If there is an empty string... (If there is no string)
       if (!option) {
         return 'Enter valid value to add item';
+        //this to check if the option already exixts in the array.
       } else if (this.state.options.indexOf(option) > -1) {
         return 'This option already exists';
       }
