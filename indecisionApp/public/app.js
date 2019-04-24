@@ -31,13 +31,18 @@ var IndecisionApp = function (_React$Component) {
   _createClass(IndecisionApp, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      var json = localStorage.getItem('options');
-      var option = JSON.parse(json);
-      console.log(option);
-
-      this.setState(function () {
-        return { option: option };
-      });
+      try {
+        var json = localStorage.getItem('options');
+        var option = JSON.parse(json);
+        console.log(option);
+        if (option) {
+          this.setState(function () {
+            return { option: option };
+          });
+        }
+      } catch (e) {
+        //do nothing at all. 
+      }
     }
   }, {
     key: 'componentDidUpdate',
@@ -224,6 +229,9 @@ var AddOption = function (_React$Component2) {
       this.setState(function () {
         return { error: error };
       });
+      if (!error) {
+        e.target.elements.option.value = '';
+      }
     }
   }, {
     key: 'render',

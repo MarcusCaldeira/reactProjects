@@ -11,13 +11,17 @@ class IndecisionApp extends React.Component {
       options: props.options
     }
   }
-  componentDidMount(){
-    const json = localStorage.getItem('options')
-    const option = JSON.parse(json)
-    console.log(option)
-
-    this.setState(() => ({option}))
-  
+  componentDidMount() {
+    try {
+      const json = localStorage.getItem('options')
+      const option = JSON.parse(json)
+      console.log(option)
+      if (option) {
+        this.setState(() => ({ option }))
+      }
+    } catch (e){
+      //do nothing at all. 
+    }
   }
   componentDidUpdate(prevProps, prevState){
     //If the previous state is not the same as the current state. 
@@ -154,6 +158,9 @@ class AddOption extends React.Component {
     const error = this.props.handleAddOption(option)
 
     this.setState(() => ({ error }))
+    if(!error){
+      e.target.elements.option.value = ''
+    }
   }
   render() {
     return (
