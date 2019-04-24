@@ -31,7 +31,13 @@ var IndecisionApp = function (_React$Component) {
   _createClass(IndecisionApp, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      console.log('Component DID Mount');
+      var json = localStorage.getItem('options');
+      var option = JSON.parse(json);
+      console.log(option);
+
+      this.setState(function () {
+        return { option: option };
+      });
     }
   }, {
     key: 'componentDidUpdate',
@@ -40,7 +46,6 @@ var IndecisionApp = function (_React$Component) {
       if (prevState.options.length !== this.state.options.length) {
         var json = JSON.stringify(this.state.options);
         localStorage.setItem('options', json);
-        console.log('The state is changing');
       }
     }
   }, {
