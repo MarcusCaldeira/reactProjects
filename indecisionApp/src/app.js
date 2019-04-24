@@ -11,6 +11,15 @@ class IndecisionApp extends React.Component {
       options: props.options
     }
   }
+  componentDidMount(){
+    console.log('Component DID Mount')
+  }
+  componentDidUpdate(){
+    console.log('The state is changing')
+  }
+  componentWillUnmount(){
+    console.log('component will unmount')
+  }
   handleDeleteOptions() {
     this.setState(() => ({ options: [] }))
   }
@@ -111,6 +120,7 @@ const Option = (props) => {
       {props.optionText}
       <button
         onClick={(e) => {
+          //Created a function that is passed up as a function
           props.handleDeleteOption(props.optionText)
         }}
       >
