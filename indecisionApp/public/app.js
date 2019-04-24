@@ -36,7 +36,10 @@ var IndecisionApp = function (_React$Component) {
   }, {
     key: 'componentDidUpdate',
     value: function componentDidUpdate() {
-      console.log('The state is changing');
+      //If the previous state is not the same as the current state. 
+      if (prevState.options.length !== this.state.options.length) {
+        console.log('The state is changing');
+      }
     }
   }, {
     key: 'componentWillUnmount',

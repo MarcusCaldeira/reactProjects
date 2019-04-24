@@ -15,7 +15,10 @@ class IndecisionApp extends React.Component {
     console.log('Component DID Mount')
   }
   componentDidUpdate(){
-    console.log('The state is changing')
+    //If the previous state is not the same as the current state. 
+    if(prevState.options.length !== this.state.options.length){
+      console.log('The state is changing')
+    }
   }
   componentWillUnmount(){
     console.log('component will unmount')
