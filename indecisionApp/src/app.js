@@ -14,9 +14,11 @@ class IndecisionApp extends React.Component {
   componentDidMount(){
     console.log('Component DID Mount')
   }
-  componentDidUpdate(){
+  componentDidUpdate(prevProps, prevState){
     //If the previous state is not the same as the current state. 
     if(prevState.options.length !== this.state.options.length){
+      const json = JSON.stringify(this.state.options)
+      localStorage.setItem('options', json)
       console.log('The state is changing')
     }
   }

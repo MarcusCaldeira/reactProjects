@@ -35,9 +35,11 @@ var IndecisionApp = function (_React$Component) {
     }
   }, {
     key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
+    value: function componentDidUpdate(prevProps, prevState) {
       //If the previous state is not the same as the current state. 
       if (prevState.options.length !== this.state.options.length) {
+        var json = JSON.stringify(this.state.options);
+        localStorage.setItem('options', json);
         console.log('The state is changing');
       }
     }
