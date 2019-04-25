@@ -69,27 +69,25 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_js__ = __webpack_require__(1);
-// import './utils'
- 
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__person_js__);
+// // import './utils'
+// import{square, add} from './utils.js' 
 
-console.log('App.js is running, what was that error')
+// console.log('App.js is running, what was that error')
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__utils_js__["a" /* square */](4))
+// console.log(square(4))
+
+
+console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["isAdult"](20))
+
 
 /***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 1 */,
+/* 2 */
+/***/ (function(module, exports) {
 
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return square; });
-console.log('Utils.js is running')
-
-
-const square = ((x) => x * x)
-
-
-
+throw new Error("Module parse failed: /Users/marcus/Desktop/webDev/reactProjects/indecisionApp/src/person.js Duplicate export 'isAdult' (15:8)\nYou may need an appropriate loader to handle this file type.\n| })\n| \n| export{ isAdult, canDrink}");
 
 /***/ })
 /******/ ]);
