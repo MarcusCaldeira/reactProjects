@@ -1,4 +1,4 @@
-import subtract, {square, add} from './utils'
+import subtract from './utils'
 
 console.log(subtract(100,50))
 

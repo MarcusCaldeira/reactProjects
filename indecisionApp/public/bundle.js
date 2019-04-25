@@ -92,9 +92,6 @@ console.log(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */](100,50))
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export square */
-/* unused harmony export add */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return subtract; });
 console.log('Utils.js is running')
 
 
@@ -104,8 +101,10 @@ const add = (a,b) => a+b
 
 const subtract = (a,b) => a-b 
 
+/* harmony default export */ __webpack_exports__["a"] = (subtract);
 
 
+// export{square, add, subtract as default}
 
 /***/ })
 /******/ ]);
