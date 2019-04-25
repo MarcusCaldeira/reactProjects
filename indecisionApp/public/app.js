@@ -64,10 +64,10 @@ var Counter = function (_React$Component) {
         key: 'componentDidMount',
         value: function componentDidMount() {
             var stringCount = localStorage.getItem('count');
-            var trueCount = parseInt(stringCount, 10);
-            if (!isNaN(trueCount)) {
+            var count = parseInt(stringCount, 10);
+            if (!isNaN(count)) {
                 this.setState(function () {
-                    return { trueCount: trueCount };
+                    return { count: count };
                 });
             }
         }
