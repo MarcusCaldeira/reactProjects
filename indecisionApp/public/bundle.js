@@ -75,13 +75,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 console.log('App.js is running, what was that error')
 
-
+console.log(square(4))
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports) {
 
 console.log('Utils.js is running')
+
+
+const square = ((x) => x * x)
 
 /***/ })
 /******/ ]);
