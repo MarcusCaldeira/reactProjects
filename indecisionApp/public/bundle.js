@@ -69,33 +69,40 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
-// // import './utils'
-// import{square, add} from './utils.js' 
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils__ = __webpack_require__(1);
+
+
+console.log(__WEBPACK_IMPORTED_MODULE_0__utils__["a" /* default */](100,50))
 
 // console.log('App.js is running, what was that error')
 
 // console.log(square(4))
 
+// import {isAdult, canDrink} from './person.js'
 
 
-
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* isAdult */](17))
+// console.log(isAdult(17))
+// console.log(canDrink(32))
 
 
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-const isAdult = ((age) => age >= 18)
-/* harmony export (immutable) */ __webpack_exports__["a"] = isAdult;
+/* unused harmony export square */
+/* unused harmony export add */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return subtract; });
+console.log('Utils.js is running')
 
-const canDrink = ((age) => age >= 21)
-/* unused harmony export canDrink */
+
+const square = ((x) => x * x)
+
+const add = (a,b) => a+b
+
+const subtract = (a,b) => a-b 
 
 
 
