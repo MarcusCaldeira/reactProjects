@@ -1,1 +1,4 @@
-console.log('App.js is running, but is it really?')
+import './utils'
+
+console.log('App.js is running, what was that error')
+
