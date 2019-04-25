@@ -1,15 +1,3 @@
+export const isAdult = ((age) => age >= 18)
+export const canDrink = ((age) => age >= 21)
 
-
-export const isAdult = ((x) => {
-    if(x > 18){
-        return true
-    }
-})
-
-export const canDrink = ((x) => {
-    if (x > 21){
-        return true
-    }
-})
-
-export{ isAdult, canDrink}

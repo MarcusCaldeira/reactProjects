@@ -70,7 +70,6 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__person_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__person_js__);
 // // import './utils'
 // import{square, add} from './utils.js' 
 
@@ -79,15 +78,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // console.log(square(4))
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["isAdult"](20))
+
+
+console.log(__WEBPACK_IMPORTED_MODULE_0__person_js__["a" /* isAdult */](17))
+
+
 
 
 /***/ }),
 /* 1 */,
 /* 2 */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module parse failed: /Users/marcus/Desktop/webDev/reactProjects/indecisionApp/src/person.js Duplicate export 'isAdult' (15:8)\nYou may need an appropriate loader to handle this file type.\n| })\n| \n| export{ isAdult, canDrink}");
+"use strict";
+const isAdult = ((age) => age >= 18)
+/* harmony export (immutable) */ __webpack_exports__["a"] = isAdult;
+
+const canDrink = ((age) => age >= 21)
+/* unused harmony export canDrink */
+
+
+
 
 /***/ })
 /******/ ]);
