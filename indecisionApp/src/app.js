@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import AddOption from './components/AddOption.js'
+import Option from './components/Option.js'
 
 
 // stateless functional component
@@ -130,21 +131,7 @@ class IndecisionApp extends React.Component {
     )
   }
   
-  const Option = (props) => {
-    return (
-      <div>
-        {props.optionText}
-        <button
-          onClick={(e) => {
-            //Created a function that is passed up as a function
-            props.handleDeleteOption(props.optionText)
-          }}
-        >
-          remove
-        </button>
-      </div>
-    )
-  }
+
   
   
   
