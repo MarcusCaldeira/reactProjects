@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import AddOption from './components/AddOption.js'
-import Option from './components/Option.js'
 import Header from './components/Header'
 import Action from './components/Action'
+import Options from './components/Options'
 
 
 // stateless functional component
@@ -91,24 +91,7 @@ class IndecisionApp extends React.Component {
 
   
 
-  
-  const Options = (props) => {
-    return (
-      <div>
-        <button onClick={props.handleDeleteOptions}>Remove All</button>
-        {props.options.length === 0 && <p>Please add an option to get started</p>}
-        {
-          props.options.map((option) => (
-            <Option
-              key={option}
-              optionText={option}
-              handleDeleteOption={props.handleDeleteOption}
-            />
-          ))
-        }
-      </div>
-    )
-  }
+ 
   
 
   
