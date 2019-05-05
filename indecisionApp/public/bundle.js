@@ -21759,7 +21759,42 @@ var AddOption = function (_React$Component) {
 exports.default = AddOption;
 
 /***/ }),
-/* 36 */,
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Option = function Option(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    props.optionText,
+    _react2.default.createElement(
+      'button',
+      {
+        onClick: function onClick(e) {
+          //Created a function that is passed up as a function
+          props.handleDeleteOption(props.optionText);
+        }
+      },
+      'remove'
+    )
+  );
+};
+exports.default = Option;
+
+/***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21848,7 +21883,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Option = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components/Option.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+var _Option = __webpack_require__(36);
 
 var _Option2 = _interopRequireDefault(_Option);
 

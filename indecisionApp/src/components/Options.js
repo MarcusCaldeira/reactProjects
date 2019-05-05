@@ -1,5 +1,5 @@
  import React from 'react'
- import Option from './components/Option.js'
+ import Option from './Option.js'
 
 
   const Options = (props) => {
