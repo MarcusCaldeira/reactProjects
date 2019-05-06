@@ -9,10 +9,16 @@ import IndecisionApp from './components/IndecisionApp'
   class OldSyntax {
       constructor(){
           this.name='Mike'
+          this.getGreeting = this.getGreeting.bind(this)
       }
+      getGreeting(){
+          return `hi my name is ${this.name}`
+      }
+
   }
   const oldSyntax = new OldSyntax()
-  console.log(oldSyntax)
+  const getGreeting = oldSyntax.getGreeting
+  console.log(getGreeting())
 
 
   //---- 
