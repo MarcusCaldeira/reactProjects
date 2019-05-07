@@ -24,8 +24,12 @@ import IndecisionApp from './components/IndecisionApp'
   //---- 
 class NewSyntax{
     name = 'Jen'
+    getGreeting = () =>{
+        return `hi my name is ${this.name}`
+    }
 
 }
 const newSyntax = new NewSyntax()
-console.log(newSyntax)
+const newGetGreeting = newSyntax.getGreeting
+console.log(newGetGreeting())
   
